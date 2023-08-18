@@ -11,7 +11,9 @@ class ApiClient {
   Future<Uint8List> generateImage({
     required String prompt,
     required String apiKey,
-    required AIStyle aiStyle,
+    required String aiStyle,
+    int? imageHeight,
+    int? imageWidth,
   }) async {
     const baseUrl = 'https://api.stability.ai';
     final url = Uri.parse(
@@ -28,8 +30,8 @@ class ApiClient {
       body: jsonEncode({
         'cfg_scale': 7,
         'clip_guidance_preset': 'FAST_BLUE',
-        'height': 512,
-        'width': 512,
+        'height': imageHeight ?? 512,
+        'width': imageWidth ?? 512,
         'samples': 1,
         'steps': 50,
         'text_prompts': [
@@ -49,51 +51,51 @@ class ApiClient {
   }
 
   ///Get the AI Style using this method [getStyle]
-  String getStyle(AIStyle? aiStyle) {
+  String getStyle(ImageAIStyle? aiStyle) {
     switch (aiStyle) {
-      case AIStyle.noStyle:
+      case ImageAIStyle.noStyle:
         return 'DEFAULT';
-      case AIStyle.anime:
+      case ImageAIStyle.anime:
         return 'ANIME';
-      case AIStyle.moreDetails:
+      case ImageAIStyle.moreDetails:
         return 'UHD';
-      case AIStyle.cyberPunk:
+      case ImageAIStyle.cyberPunk:
         return 'CYBERPUNK';
-      case AIStyle.kandinskyPainter:
+      case ImageAIStyle.kandinskyPainter:
         return 'KANDINSKY';
-      case AIStyle.aivazovskyPainter:
+      case ImageAIStyle.aivazovskyPainter:
         return 'AIVAZOVSKY';
-      case AIStyle.malevichPainter:
+      case ImageAIStyle.malevichPainter:
         return 'MALEVICH';
-      case AIStyle.picassoPainter:
+      case ImageAIStyle.picassoPainter:
         return 'PICASSO';
-      case AIStyle.goncharovaPainter:
+      case ImageAIStyle.goncharovaPainter:
         return 'GONCHAROVA';
-      case AIStyle.classicism:
+      case ImageAIStyle.classicism:
         return 'CLASSICISM';
-      case AIStyle.renaissance:
+      case ImageAIStyle.renaissance:
         return 'RENAISSANCE';
-      case AIStyle.oilPainting:
+      case ImageAIStyle.oilPainting:
         return 'OILPAINTING';
-      case AIStyle.pencilDrawing:
+      case ImageAIStyle.pencilDrawing:
         return 'PENCILDRAWING';
-      case AIStyle.digitalPainting:
+      case ImageAIStyle.digitalPainting:
         return 'DIGITALPAINTING';
-      case AIStyle.medievalStyle:
+      case ImageAIStyle.medievalStyle:
         return 'MEDIEVALPAINTING';
-      case AIStyle.render3D:
+      case ImageAIStyle.render3D:
         return 'RENDER';
-      case AIStyle.cartoon:
+      case ImageAIStyle.cartoon:
         return 'CARTOON';
-      case AIStyle.studioPhoto:
+      case ImageAIStyle.studioPhoto:
         return 'STUDIOPHOTO';
-      case AIStyle.portraitPhoto:
+      case ImageAIStyle.portraitPhoto:
         return 'PORTRAITPHOTO';
-      case AIStyle.khokhlomaPainter:
+      case ImageAIStyle.khokhlomaPainter:
         return 'KHOKHLOMA';
-      case AIStyle.christmas:
+      case ImageAIStyle.christmas:
         return 'CRISTMAS';
-      case AIStyle.sovietCartoon:
+      case ImageAIStyle.sovietCartoon:
         return 'SOVIETCARTOON';
       default:
         return 'DEFAULT';

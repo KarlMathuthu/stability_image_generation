@@ -23,7 +23,7 @@
 /// - portraitPhoto: Portrait photo-style drawing.
 /// - khokhlomaPainter: Khokhloma-style painting.
 /// - christmas: Christmas-style drawing.
-enum AIStyle {
+enum ImageAIStyle {
   /// Default value when no style is selected
   noStyle, // Default value when no style is selected
   /// Anime style
