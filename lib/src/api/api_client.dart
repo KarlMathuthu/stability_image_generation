@@ -5,8 +5,8 @@ import 'dart:typed_data';
 import 'package:http/http.dart' as http;
 import 'package:stability_image_generation/src/data/enums.dart';
 
-///main holder class [ApiClient]
-class ApiClient {
+///main holder class [StabilityAI]
+class StabilityAI {
   ///This method[generateImage] is the one that creates image from the stability api.
   Future<Uint8List> generateImage({
     required String prompt,
