@@ -62,7 +62,7 @@ class _TestState extends State<Test> {
 
   /// The [_generate] function to generate image data.
   Future<Uint8List> _generate(String query) async {
-    /// Call the runAI method with the required parameters.
+    /// Call the generateImage method with the required parameters.
     Uint8List image = await _ai.generateImage(
       apiKey: apiKey,
       imageAIStyle: imageAIStyle,
