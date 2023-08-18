@@ -3,7 +3,7 @@ description: A Free Flutter Package for Image Generation using Stability API.
 homepage: https://github.com/KarlMathuthu/stability_image_generation
 repository: https://github.com/KarlMathuthu/stability_image_generation
 issue_tracker: https://github.com/KarlMathuthu/stability_image_generation/issues
-version: 0.0.2
+version: 0.0.3
 
 topics:
   - ai
@@ -14,9 +14,9 @@ topics:
 
 screenshots:
   - description: Example 01.
-    path: screenshots/01.png
-  - description: Example 02.
     path: screenshots/02.png
+  - description: Example 02.
+    path: screenshots/01.png
   - description: Example 03.
     path: screenshots/03.png
   - description: Example 04.
