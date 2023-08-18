@@ -1,7 +1,17 @@
 name: stability_image_generation
 description: A Free Flutter Package for Image Generation using Stability API.
+homepage: https://github.com/KarlMathuthu/stability_image_generation
+repository: https://github.com/KarlMathuthu/stability_image_generation
+issue_tracker: https://github.com/KarlMathuthu/stability_image_generation/issues
 version: 0.0.1
-homepage:
+
+topics:
+  - ai
+  - ai-art
+  - image-generator
+  - stability-api
+  - text-image
+
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
