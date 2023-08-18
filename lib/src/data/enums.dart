@@ -1,4 +1,4 @@
-/// The [AIStyle] enum is used to specify the different styles that can be used
+/// The [imageAIStyle] enum is used to specify the different styles that can be used
 /// by the AI to generate the image. Each enum value corresponds to a specific
 /// drawing style.
 /// The available styles are:

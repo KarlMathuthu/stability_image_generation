@@ -11,7 +11,7 @@ class ApiClient {
   Future<Uint8List> generateImage({
     required String prompt,
     required String apiKey,
-    required ImageAIStyle aiStyle,
+    required ImageAIStyle imageAIStyle,
     int? imageHeight,
     int? imageWidth,
   }) async {
@@ -37,7 +37,7 @@ class ApiClient {
         'steps': 50,
         'text_prompts': [
           {
-            'text': "$prompt using ${getStyle(aiStyle)}",
+            'text': "$prompt using ${getStyle(imageAIStyle)}",
             'weight': 1,
           }
         ],
