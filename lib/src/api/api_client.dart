@@ -16,9 +16,14 @@ class StabilityAI {
     int? imageWidth,
   }) async {
     const baseUrl = 'https://api.stability.ai';
+    const engineId = 'stable-diffusion-xl-1024-v1-0';
+    //const engineId = "stable-diffusion-512-v2-0";
     final url = Uri.parse(
-      '$baseUrl/v1alpha/generation/stable-diffusion-512-v2-0/text-to-image',
+      '$baseUrl/v1/generation/$engineId/text-to-image',
     );
+    /* final url = Uri.parse(
+      '$baseUrl/v1/generation/$engineId/text-to-image',
+    ); */
 
     ///Make the HTTP POST request to the Stability Platform API
     final response = await http.post(
@@ -29,15 +34,16 @@ class StabilityAI {
         'Accept': 'image/png',
       },
       body: jsonEncode({
-        'cfg_scale': 7,
+        'cfg_scale': 12,
         'clip_guidance_preset': 'FAST_BLUE',
-        'height': imageHeight ?? 512,
-        'width': imageWidth ?? 512,
+        'height': imageHeight ?? 1024,
+        'width': imageWidth ?? 1024,
         'samples': 1,
         'steps': 50,
+        'seed': 2000000,
         'text_prompts': [
           {
-            'text': "$prompt using ${getStyle(imageAIStyle)}",
+            'text': "$prompt ${getStyle(imageAIStyle)}",
             'weight': 1,
           }
         ],
@@ -55,23 +61,23 @@ class StabilityAI {
   String getStyle(ImageAIStyle aiStyle) {
     switch (aiStyle) {
       case ImageAIStyle.noStyle:
-        return 'DEFAULT';
+        return 'no style';
       case ImageAIStyle.anime:
-        return 'ANIME style';
+        return 'anime style, masterpiece, best quality, ultra-detailed, cinematic lighting, illustration';
       case ImageAIStyle.moreDetails:
         return 'UHD';
       case ImageAIStyle.cyberPunk:
-        return 'CYBERPUNK style';
+        return 'cyberpunk, future';
       case ImageAIStyle.kandinskyPainter:
-        return 'KANDINSKY style';
+        return 'KANDINSKY style painter';
       case ImageAIStyle.aivazovskyPainter:
         return 'AIVAZOVSKY style';
       case ImageAIStyle.malevichPainter:
-        return 'MALEVICH style';
+        return 'MALEVICH style painter';
       case ImageAIStyle.picassoPainter:
-        return 'PICASSO style';
+        return 'PICASSO style painter';
       case ImageAIStyle.goncharovaPainter:
-        return 'GONCHAROVA style';
+        return 'GONCHAROVA style painter';
       case ImageAIStyle.classicism:
         return 'CLASSICISM style';
       case ImageAIStyle.renaissance:
