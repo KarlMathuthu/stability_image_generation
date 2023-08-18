@@ -7,6 +7,7 @@
 - ##### Generate Images from Text
 - ##### High Quality
 - ##### More Then 10 Style
+- ##### Can add new styles on your own
 
 ## How it work !
 
