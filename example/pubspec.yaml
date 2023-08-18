@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  stability_image_generation:
+    path: ../
 
 
   # The following adds the Cupertino Icons font to your application.
