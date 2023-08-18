@@ -48,8 +48,14 @@ class _TestState extends State<Test> {
   /// The text editing controller for the query.
   final TextEditingController _queryController = TextEditingController();
 
-  /// Initializes the [AI] class from the 'brain_fusion' package.
+  /// Initializes the [StabilityAI] class from the 'brain_fusion' package.
   final StabilityAI _ai = StabilityAI();
+
+  /// This is the api key from stability.ai or https://dreamstudio.ai/, Create yours and replace it here.
+  final String apiKey = '';
+
+  /// This is the style [ImageAIStyle]
+  final ImageAIStyle imageAIStyle = ImageAIStyle.anime;
 
   /// The boolean value to run the function.
   bool run = false;
@@ -58,7 +64,9 @@ class _TestState extends State<Test> {
   Future<Uint8List> _generate(String query) async {
     /// Call the runAI method with the required parameters.
     Uint8List image = await _ai.generateImage(
-    
+      apiKey: apiKey,
+      imageAIStyle: imageAIStyle,
+      prompt: 'A boy in an old village',
     );
     return image;
   }
