@@ -20,7 +20,7 @@
 
 - ##### The original website [Official Documentation](https://api.stability.ai/docs#tag/v1generation/operation/textToImage)
 
-##### Second Import The Package :
+##### Import The Package :
 ```dart
 import 'package:stability_image_generation/stability_image_generation.dart';
 ```
@@ -96,3 +96,5 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
+## Developers
+#### Made with ❤️ by Karl Mathuhu
