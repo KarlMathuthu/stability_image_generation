@@ -1,4 +1,6 @@
 /// Import the necessary packages for the test
+// ignore_for_file: avoid_print
+
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
