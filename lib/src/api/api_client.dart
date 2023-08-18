@@ -56,47 +56,47 @@ class ApiClient {
       case ImageAIStyle.noStyle:
         return 'DEFAULT';
       case ImageAIStyle.anime:
-        return 'ANIME';
+        return 'ANIME style';
       case ImageAIStyle.moreDetails:
         return 'UHD';
       case ImageAIStyle.cyberPunk:
-        return 'CYBERPUNK';
+        return 'CYBERPUNK style';
       case ImageAIStyle.kandinskyPainter:
-        return 'KANDINSKY';
+        return 'KANDINSKY style';
       case ImageAIStyle.aivazovskyPainter:
-        return 'AIVAZOVSKY';
+        return 'AIVAZOVSKY style';
       case ImageAIStyle.malevichPainter:
-        return 'MALEVICH';
+        return 'MALEVICH style';
       case ImageAIStyle.picassoPainter:
-        return 'PICASSO';
+        return 'PICASSO style';
       case ImageAIStyle.goncharovaPainter:
-        return 'GONCHAROVA';
+        return 'GONCHAROVA style';
       case ImageAIStyle.classicism:
-        return 'CLASSICISM';
+        return 'CLASSICISM style';
       case ImageAIStyle.renaissance:
-        return 'RENAISSANCE';
+        return 'RENAISSANCE style';
       case ImageAIStyle.oilPainting:
-        return 'OILPAINTING';
+        return 'OILPAINTING style';
       case ImageAIStyle.pencilDrawing:
-        return 'PENCILDRAWING';
+        return 'PENCILDRAWING style';
       case ImageAIStyle.digitalPainting:
-        return 'DIGITALPAINTING';
+        return 'DIGITALPAINTING style';
       case ImageAIStyle.medievalStyle:
-        return 'MEDIEVALPAINTING';
+        return 'MEDIEVALPAINTING style';
       case ImageAIStyle.render3D:
-        return 'RENDER';
+        return 'RENDER 3d style';
       case ImageAIStyle.cartoon:
-        return 'CARTOON';
+        return 'CARTOON style';
       case ImageAIStyle.studioPhoto:
-        return 'STUDIOPHOTO';
+        return 'STUDIOPHOTO style';
       case ImageAIStyle.portraitPhoto:
-        return 'PORTRAITPHOTO';
+        return 'PORTRAITPHOTO style';
       case ImageAIStyle.khokhlomaPainter:
-        return 'KHOKHLOMA';
+        return 'KHOKHLOMA style';
       case ImageAIStyle.christmas:
-        return 'CRISTMAS';
+        return 'CRISTMAS style';
       case ImageAIStyle.sovietCartoon:
-        return 'SOVIETCARTOON';
+        return 'SOVIETCARTOON style';
       default:
         return 'DEFAULT';
     }
