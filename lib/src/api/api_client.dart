@@ -11,20 +11,21 @@ class ApiClient {
   Future<Uint8List> generateImage({
     required String prompt,
     required String apiKey,
-    required String aiStyle,
+    required ImageAIStyle aiStyle,
     int? imageHeight,
     int? imageWidth,
   }) async {
     const baseUrl = 'https://api.stability.ai';
     final url = Uri.parse(
-        '$baseUrl/v1alpha/generation/stable-diffusion-512-v2-0/text-to-image');
+      '$baseUrl/v1alpha/generation/stable-diffusion-512-v2-0/text-to-image',
+    );
 
-    // Make the HTTP POST request to the Stability Platform API
+    ///Make the HTTP POST request to the Stability Platform API
     final response = await http.post(
       url,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer $apiKey',
+        'Authorization': 'Bearer ${getStyle(aiStyle)}',
         'Accept': 'image/png',
       },
       body: jsonEncode({
@@ -36,7 +37,7 @@ class ApiClient {
         'steps': 50,
         'text_prompts': [
           {
-            'text': "$prompt ${aiStyle.toString()}",
+            'text': "$prompt using ${aiStyle.toString()}",
             'weight': 1,
           }
         ],
@@ -51,7 +52,7 @@ class ApiClient {
   }
 
   ///Get the AI Style using this method [getStyle]
-  String getStyle(ImageAIStyle? aiStyle) {
+  String getStyle(ImageAIStyle aiStyle) {
     switch (aiStyle) {
       case ImageAIStyle.noStyle:
         return 'DEFAULT';
