@@ -25,7 +25,7 @@ class ApiClient {
       url,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ${getStyle(aiStyle)}',
+        'Authorization': 'Bearer $apiKey',
         'Accept': 'image/png',
       },
       body: jsonEncode({
@@ -37,7 +37,7 @@ class ApiClient {
         'steps': 50,
         'text_prompts': [
           {
-            'text': "$prompt using ${aiStyle.toString()}",
+            'text': "$prompt using ${getStyle(aiStyle)}",
             'weight': 1,
           }
         ],
