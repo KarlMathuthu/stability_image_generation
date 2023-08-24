@@ -12,8 +12,6 @@ class StabilityAI {
     required String prompt,
     required String apiKey,
     required ImageAIStyle imageAIStyle,
-    int? imageHeight,
-    int? imageWidth,
   }) async {
     const baseUrl = 'https://api.stability.ai';
     const engineId = 'stable-diffusion-xl-1024-v1-0';
@@ -36,8 +34,8 @@ class StabilityAI {
       body: jsonEncode({
         'cfg_scale': 12,
         'clip_guidance_preset': 'FAST_BLUE',
-        'height': imageHeight ?? 1024,
-        'width': imageWidth ?? 1024,
+        'height': 1024,
+        'width': 1024,
         'samples': 1,
         'steps': 50,
         'seed': 2000000,
@@ -63,47 +61,47 @@ class StabilityAI {
       case ImageAIStyle.noStyle:
         return 'no style';
       case ImageAIStyle.anime:
-        return 'anime style, masterpiece, best quality, ultra-detailed, cinematic lighting, illustration';
+        return ', anime style, masterpiece, best quality, ultra-detailed, cinematic lighting, illustration';
       case ImageAIStyle.moreDetails:
-        return 'UHD';
+        return ', UHD';
       case ImageAIStyle.cyberPunk:
-        return 'cyberpunk, future';
+        return ', cyberpunk, future';
       case ImageAIStyle.kandinskyPainter:
-        return 'KANDINSKY style painter';
+        return ', KANDINSKY style painter';
       case ImageAIStyle.aivazovskyPainter:
-        return 'AIVAZOVSKY style';
+        return ', AIVAZOVSKY style';
       case ImageAIStyle.malevichPainter:
-        return 'MALEVICH style painter';
+        return ', MALEVICH style painter';
       case ImageAIStyle.picassoPainter:
-        return 'PICASSO style painter';
+        return ', PICASSO style painter';
       case ImageAIStyle.goncharovaPainter:
-        return 'GONCHAROVA style painter';
+        return ', GONCHAROVA style painter';
       case ImageAIStyle.classicism:
-        return 'CLASSICISM style';
+        return ', CLASSICISM style';
       case ImageAIStyle.renaissance:
-        return 'RENAISSANCE style';
+        return ', RENAISSANCE style';
       case ImageAIStyle.oilPainting:
-        return 'OILPAINTING style';
+        return ', OILPAINTING style';
       case ImageAIStyle.pencilDrawing:
-        return 'PENCILDRAWING style';
+        return ', PENCILDRAWING style';
       case ImageAIStyle.digitalPainting:
-        return 'DIGITALPAINTING style';
+        return ', DIGITALPAINTING style';
       case ImageAIStyle.medievalStyle:
-        return 'MEDIEVALPAINTING style';
+        return ', MEDIEVALPAINTING style';
       case ImageAIStyle.render3D:
-        return 'RENDER 3d style';
+        return ', RENDER 3d style';
       case ImageAIStyle.cartoon:
-        return 'CARTOON style';
+        return ', CARTOON style';
       case ImageAIStyle.studioPhoto:
-        return 'STUDIOPHOTO style';
+        return ', STUDIOPHOTO style';
       case ImageAIStyle.portraitPhoto:
-        return 'PORTRAITPHOTO style';
+        return ', PORTRAITPHOTO style';
       case ImageAIStyle.khokhlomaPainter:
-        return 'KHOKHLOMA style';
+        return ', KHOKHLOMA style';
       case ImageAIStyle.christmas:
-        return 'CRISTMAS style';
+        return ', CRISTMAS style';
       case ImageAIStyle.sovietCartoon:
-        return 'SOVIETCARTOON style';
+        return ', SOVIETCARTOON style';
       default:
         return 'DEFAULT';
     }
