@@ -63,45 +63,45 @@ class StabilityAI {
       case ImageAIStyle.anime:
         return ',{masterpiece} anime style, best quality, ultra-detailed, cinematic lighting, illustration';
       case ImageAIStyle.moreDetails:
-        return ', UHD';
+        return ',{masterpiece}, UHD';
       case ImageAIStyle.cyberPunk:
-        return ', cyberpunk, future';
+        return ',{masterpiece}, cyberpunk, future';
       case ImageAIStyle.kandinskyPainter:
-        return ', KANDINSKY style painter';
+        return ',{masterpiece}, KANDINSKY style painter';
       case ImageAIStyle.aivazovskyPainter:
-        return ', AIVAZOVSKY style';
+        return ',{masterpiece}, AIVAZOVSKY style';
       case ImageAIStyle.malevichPainter:
-        return ', MALEVICH style painter';
+        return ',{masterpiece}, MALEVICH style painter';
       case ImageAIStyle.picassoPainter:
-        return ', PICASSO style painter';
+        return ',{masterpiece}, PICASSO style painter';
       case ImageAIStyle.goncharovaPainter:
-        return ', GONCHAROVA style painter';
+        return ',{masterpiece}, GONCHAROVA style painter';
       case ImageAIStyle.classicism:
-        return ', CLASSICISM style';
+        return ',{masterpiece}, CLASSICISM style';
       case ImageAIStyle.renaissance:
-        return ', RENAISSANCE style';
+        return ',{masterpiece}, RENAISSANCE style';
       case ImageAIStyle.oilPainting:
-        return ', OILPAINTING style';
+        return ',{masterpiece}, OILPAINTING style';
       case ImageAIStyle.pencilDrawing:
-        return ', PENCILDRAWING style';
+        return ',{masterpiece}, PENCILDRAWING style';
       case ImageAIStyle.digitalPainting:
-        return ', DIGITALPAINTING style';
+        return ',{masterpiece}, DIGITALPAINTING style';
       case ImageAIStyle.medievalStyle:
-        return ', MEDIEVALPAINTING style';
+        return ',{masterpiece}, MEDIEVALPAINTING style';
       case ImageAIStyle.render3D:
-        return ', RENDER 3d style';
+        return ',{masterpiece}, RENDER 3d style';
       case ImageAIStyle.cartoon:
-        return ', CARTOON style';
+        return ',{masterpiece}, CARTOON style';
       case ImageAIStyle.studioPhoto:
-        return ', STUDIOPHOTO style';
+        return ',{masterpiece}, STUDIOPHOTO style';
       case ImageAIStyle.portraitPhoto:
-        return ', PORTRAITPHOTO style';
+        return ',{masterpiece}, PORTRAITPHOTO style';
       case ImageAIStyle.khokhlomaPainter:
-        return ', KHOKHLOMA style';
+        return ',{masterpiece}, KHOKHLOMA style';
       case ImageAIStyle.christmas:
-        return ', CRISTMAS style';
+        return ',{masterpiece}, CRISTMAS style';
       case ImageAIStyle.sovietCartoon:
-        return ', SOVIETCARTOON style';
+        return ',{masterpiece}, SOVIETCARTOON style';
       default:
         return 'DEFAULT';
     }
