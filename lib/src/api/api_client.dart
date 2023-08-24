@@ -13,6 +13,11 @@ class StabilityAI {
     required String apiKey,
     required ImageAIStyle imageAIStyle,
     String? engineId,
+    String? seed,
+    String? steps,
+    String? samples,
+    String? weight,
+    String? cfg_scale,
   }) async {
     const baseUrl = 'https://api.stability.ai';
     const engineId_in = 'stable-diffusion-xl-1024-v1-0';
@@ -33,17 +38,17 @@ class StabilityAI {
         'Accept': 'image/png',
       },
       body: jsonEncode({
-        'cfg_scale': 12,
+        'cfg_scale': cfg_scale ?? 12,
         'clip_guidance_preset': 'FAST_BLUE',
         'height': 1024,
         'width': 1024,
-        'samples': 1,
-        'steps': 50,
-        'seed': 2000000,
+        'samples': samples ?? 1,
+        'steps': steps ?? 50,
+        'seed': seed ?? 2000000,
         'text_prompts': [
           {
             'text': "$prompt ${getStyle(imageAIStyle)}",
-            'weight': 1,
+            'weight': weight ?? 1,
           }
         ],
       }),
