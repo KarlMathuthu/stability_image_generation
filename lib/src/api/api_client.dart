@@ -12,12 +12,13 @@ class StabilityAI {
     required String prompt,
     required String apiKey,
     required ImageAIStyle imageAIStyle,
+    String? engineId,
   }) async {
     const baseUrl = 'https://api.stability.ai';
-    const engineId = 'stable-diffusion-xl-1024-v1-0';
+    const engineId_in = 'stable-diffusion-xl-1024-v1-0';
     //const engineId = "stable-diffusion-512-v2-0";
     final url = Uri.parse(
-      '$baseUrl/v1/generation/$engineId/text-to-image',
+      '$baseUrl/v1/generation/${engineId ?? engineId_in}/text-to-image',
     );
     /* final url = Uri.parse(
       '$baseUrl/v1/generation/$engineId/text-to-image',
