@@ -17,9 +17,9 @@ void main() {
       StabilityAI ai = StabilityAI();
 
       /// Define the query and AI style
-      String query = 'A cat running alongside a dog';
-      ImageAIStyle style = ImageAIStyle.anime;
-      String apiKey = 'sk-- api key from stability api or dreamstudio';
+      String query = 'A cat';
+      ImageAIStyle style = ImageAIStyle.cartoon;
+      String apiKey = 'sk-- api key from stability website or dreamstudio';
 
       try {
         /// Call the runAI method with the required parameters
