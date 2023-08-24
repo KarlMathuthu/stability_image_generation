@@ -9,3 +9,4 @@
 * Optional engine Id, seed, steps, samples, weight and cfg_scale;
 * Updated AI Styles.
 * Removed Optional height & width of an image because it'll throw an error.
+* Remember if you're using the custom engine id, Please use it if you're experienced.
