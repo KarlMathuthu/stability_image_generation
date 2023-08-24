@@ -61,7 +61,7 @@ class StabilityAI {
       case ImageAIStyle.noStyle:
         return 'no style';
       case ImageAIStyle.anime:
-        return ', anime style, masterpiece, best quality, ultra-detailed, cinematic lighting, illustration';
+        return ',{masterpiece} anime style, best quality, ultra-detailed, cinematic lighting, illustration';
       case ImageAIStyle.moreDetails:
         return ', UHD';
       case ImageAIStyle.cyberPunk:
