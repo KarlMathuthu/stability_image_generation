@@ -18,7 +18,7 @@
 
 ##### First create your free api key from this website.
 
-- ##### The original website [Official Documentation](https://api.stability.ai/docs#tag/v1generation/operation/textToImage)
+- ##### The original website [Create Free Api Key](https://dreamstudio.ai/)
 
 ##### Import The Package :
 ```dart
