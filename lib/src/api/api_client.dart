@@ -17,13 +17,13 @@ class StabilityAI {
     String? steps,
     String? samples,
     String? weight,
-    String? cfg_scale,
+    String? cfgScale,
   }) async {
     const baseUrl = 'https://api.stability.ai';
-    const engineId_in = 'stable-diffusion-xl-1024-v1-0';
+    const engineIdIn = 'stable-diffusion-xl-1024-v1-0';
     //const engineId = "stable-diffusion-512-v2-0";
     final url = Uri.parse(
-      '$baseUrl/v1/generation/${engineId ?? engineId_in}/text-to-image',
+      '$baseUrl/v1/generation/${engineId ?? engineIdIn}/text-to-image',
     );
     /* final url = Uri.parse(
       '$baseUrl/v1/generation/$engineId/text-to-image',
@@ -38,7 +38,7 @@ class StabilityAI {
         'Accept': 'image/png',
       },
       body: jsonEncode({
-        'cfg_scale': cfg_scale ?? 12,
+        'cfg_scale': cfgScale ?? 12,
         'clip_guidance_preset': 'FAST_BLUE',
         'height': 1024,
         'width': 1024,
