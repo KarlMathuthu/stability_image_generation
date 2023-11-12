@@ -54,7 +54,7 @@ class _TestState extends State<Test> {
   final StabilityAI _ai = StabilityAI();
 
   /// This is the api key from stability.ai or https://dreamstudio.ai/, Create yours and replace it here.
-  final String apiKey = 'sk-qaX8WHEJEl05Z30uCiGgKoKInVeoMOBZbsgV0BUqFW35CBnB';
+  final String apiKey = 'sk-------------';
 
   /// This is the style [ImageAIStyle]
   final ImageAIStyle imageAIStyle = ImageAIStyle.christmas;
