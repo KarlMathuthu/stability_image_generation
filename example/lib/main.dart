@@ -73,6 +73,8 @@ class _TestState extends State<Test> {
     return image;
   }
 
+  // [Dispose] is very important
+
   @override
   void dispose() {
     _queryController.dispose();
