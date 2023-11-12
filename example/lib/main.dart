@@ -75,7 +75,6 @@ class _TestState extends State<Test> {
 
   @override
   void dispose() {
-    /// Dispose the [_queryController].
     _queryController.dispose();
     super.dispose();
   }
